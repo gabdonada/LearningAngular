@@ -1,0 +1,17 @@
+<hr>
+<h2>Edição de itens</h2>
+<form action="">
+    <label for="txPrd">Produto:</label><br>
+    <input type="text" id="txPrd" name="txPrd"[(ngModel)]="prd"> <br> <!-- [(ngModel)]="" para referenciar a variavel no TS-->
+    <label for="nmQtd">Quantidade:</label><br>
+    <input type="number" id="nmQtd" name="nmQtd" [(ngModel)]="qtd"><br>
+    <label for="txcategoria">Categoria:</label><br>
+    <select name="txcategoria" id="txcategoria" [(ngModel)]="categoria">
+        <option value="Comida">Comida</option>
+        <option value="Tecnologia">Tecnologia</option>
+        <option value="Bebida">Bebida</option>
+        <option value="Outros">Outros</option>
+        <option value="Livro">Livro</option>
+    </select><br>
+    <button (click)="salvar()">Salvar</button><br>
+</form>

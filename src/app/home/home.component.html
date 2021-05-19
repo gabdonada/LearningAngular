@@ -1,0 +1,13 @@
+
+<table>
+  <tr><th>Produto</th><th>Quantidade</th><th>Categoria</th></tr>
+  <tr *ngFor="let item of catalogo.itens">
+    <td>{{item.produto.nome}}</td>
+    <td>{{item.quantidade}}</td>
+    <td>{{item.produto.categoria}}</td>
+    
+  </tr>
+</table>
+<p>Total de itens {{catalogo.itens.length}}<p>
+<app-cadastro [catalogo]="catalogo"></app-cadastro> <!-- Recebe Itens de home.ts-->
+
